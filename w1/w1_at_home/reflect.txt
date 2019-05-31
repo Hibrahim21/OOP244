@@ -1,0 +1,9 @@
+I learned that using namespace helps the problem of naming conflicts in large scale programs. Header files are used for function prototypes and class definitions. Comiling a header file defies the purpose of modular programming, only implementation files need to be comipled, otherwise comiling a header file is useless. It doesn't contain and logic. Including a .cpp file into another file isn't good programming habits. The reason why .cpp files are seperated is because each file has it own disticnt function and single task. 
+
+Quiz 1 Reflection:
+
+Question 1:
+What is the purpose of using namespace.
+
+I forgot to mention naming conflicts will occur without the use of namespace. 
+

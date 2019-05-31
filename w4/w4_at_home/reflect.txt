@@ -1,0 +1,7 @@
+What I learned:
+I leaned about creating a constructor, how to overload a constructor and the use of This.
+1.      Safe empty state is a state where all the instance variables are set to 0 or ‘/0’ if it is a string. This would prevent garbage values to be displayed if the client calls a display function without setting any values or if set those values as default if data entered isn’t valid.
+2.      By using the isEmpty() function when I want to check if the object is empty or not for my display() and name() function.
+3.      Since canTravelWith(…) is a member function declared in the class, it can access the private data of the class.
+Quiz 4 reflect
+I lost 2.5 marks on it, but I didn’t get my quiz back yet.

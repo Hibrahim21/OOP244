@@ -1,0 +1,14 @@
+In line number 448 of your output:
+The output should be:
+|   4 |    1234 | Royal Gala Ap... | kg         |    4.42 |  no |    332 |    332 | 2019/05/16 |
+                                                                     ^
+But your output is: 
+|   4 |    1234 | Royal Gala Ap... | kg         |    4.42 |  no |     82 |    332 | 2019/05/16 |
+                                                                     ^
+
+Unmatched character details:
+The character in column 70 is supposed to be:
+  [3] ASCII code(51)
+but you printed
+  [Space] ASCII code(32)
+

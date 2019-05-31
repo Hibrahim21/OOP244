@@ -1,0 +1,4 @@
+1.      No, a base class does not need to know the existence of a class that has been derived from itself.
+2.      Yes, the derived class needs to know about the existence of the base because the derived class inherits the structure of the base class and uses its variables and member function unless specified otherwise.
+3.      It printed "Ancient Battle!" when a Hero fought a SuperHero.
+I learned the concept and syntax of creating a derived class.

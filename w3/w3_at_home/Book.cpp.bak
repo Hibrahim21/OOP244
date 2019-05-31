@@ -1,0 +1,153 @@
+/*
+Name: Hamza Ibrahim
+Seneca email: hibrahim21@myseneca.ca
+Seneca ID: 107467185
+*/
+#include <iostream>
+#include <string>
+#include <string.h>
+#include <iomanip>
+#include "Book.h"
+
+using namespace std;
+
+namespace sict {
+
+	Book::Book() {
+
+		family_name[0] = '\0';
+		b_title[0] = '\0';
+		given_name[0] = '\0';
+		b_isbn = 0;
+		b_year = 0;
+		b_price = 0;
+	}
+
+	void Book::set(const char * g, const char *f, const char * t, long long Isbn) {
+		
+		int even = 0, odd = 0, sum = 0, num = 0, fi_num = 0, i = 0;
+		long long f_num = Isbn;
+
+		if (Isbn >= min_isbn_value && Isbn <= max_isbn_value) {
+
+			for (i = 13; i >= 0; i--) {
+
+				if (i == 13) {
+					fi_num = Isbn % 10;
+				}
+
+				else if ((i % 2) == 0 && i != 13) {
+					even += (f_num % 10);
+				}
+
+				else if ((i % 2) != 0 && i != 13) {
+					odd += (f_num % 10);
+				}
+
+				f_num /= 10;
+			}
+
+			sum = odd + (even * 3);
+
+			if (sum % 10 == 0)
+				num = 0;
+			else {
+				num = 10 - (sum % 10);
+			}
+			if (num == fi_num) {
+
+				b_isbn = Isbn;
+				strncpy(given_name, g, max_name_size);
+				strncpy(family_name, f, max_name_size);
+				strncpy(b_title, t, max_title_size);
+			}
+			else
+				Isbn = 0;
+
+		}
+
+		else
+			Isbn = 0;
+
+	}
+
+	void Book::set(int year, double price) {
+
+		b_year = year;
+		b_price = price;
+	}
+
+
+	bool Book::isEmpty() const {
+
+		if (b_isbn == 0)
+			return true;
+
+		else return false;
+	}
+
+	void Book::display(bool b_valid) const {
+
+		if (b_isbn == 0 && b_valid == false) {
+			cout << "The book object is empty!" << endl;
+		}
+
+		else if (b_isbn != 0 && b_valid == false) {
+			cout << "Author: " << family_name << ", " << given_name << endl;
+			cout << "Title: " << b_title << endl;
+			cout << "ISBN-13: " << b_isbn << endl;
+			cout << "Publication Year: " << b_year << endl;
+			cout << "Price: " << b_price << endl;
+		}
+
+		else if (b_isbn == 0 && b_valid == true) {
+			cout << setw(93) << left << "|The book object is empty!" << "|" << endl;
+		}
+
+		else if (b_isbn != 0 && b_valid == true) {
+
+			/*cout.setf(ios::right);
+			cout.width(max_name_size);
+			cout << family_name << "|";
+
+			cout.width(max_name_size);
+			cout << given_name << "|";
+
+			cout.unsetf(ios::right);
+
+			cout.setf(ios::left);
+			cout.width(max_title_size);
+			cout << b_title << "|";
+
+			cout.unsetf(ios::left);
+
+			cout.setf(ios::right);
+			cout.width(13);
+			cout << b_isbn << "|";
+
+			cout.width(4);
+			cout << b_year << "|";
+
+			cout.width(6);
+			cout.setf(ios::fixed);
+			cout.precision(2);
+
+			cout << b_price << "|" << endl;
+
+			*/
+			cout << "|" << setw(max_name_size) << right << family_name << "|"
+
+				<< setw(max_name_size) << right << given_name << "|"
+
+				<< setw(max_title_size) << left << b_title << "|"
+
+				<< setw(13) << right << b_isbn << "|"
+
+				<< setw(4) << right << b_year << "|"
+
+				<< fixed << setprecision(3) << setw(6) << right << b_price << "|" << endl;
+		}
+
+
+	}
+}

@@ -1,0 +1,14 @@
+In line number 15 of your output:
+The output should be:
+The Minimum Violent Crime rate was 463
+    ^
+But your output is: 
+The minimum Violent Crime rate was 463
+    ^
+
+Unmatched character details:
+The character in column 5 is supposed to be:
+  [M] ASCII code(77)
+but you printed
+  [m] ASCII code(109)
+

@@ -1,0 +1,5 @@
+1.	It shows build errors and doesn’t compile.
+2.	It doesn’t work unless you define the template function above the main() and not under.
+3.	Yes it is possible but it will be inconvenient and very messy. Template allows us to use the codes that have the same logic without worrying about the parameter types and the need for needless duplication of functions.
+4.	No difference because both are used to identify a type.
+5.	I learned about Function Templates and how they can minimize code repetition. 

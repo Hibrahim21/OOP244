@@ -1,0 +1,14 @@
+In line number 215 of your output:
+The output should be:
+            Name (no spaces): Blanket
+                              ^
+But your output is: 
+            Name (no spaces): blanket
+                              ^
+
+Unmatched character details:
+The character in column 31 is supposed to be:
+  [B] ASCII code(66)
+but you printed
+  [b] ASCII code(98)
+

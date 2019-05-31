@@ -1,0 +1,24 @@
+1. You will need to need to allocate new dynamic memory for the entire array when increasing the size of an already existing array of dynamically allocated memory because it isn’t possible to change the size of it without maybe overwriting the old element. Thus, needing to create a new array, copying the values of the old elements into the new one.
+
+2. The delete operator removes the pointer that connects to the dynamically allocated memory. So there is no point in deallocating the CellPhone structure, just the pointer pointing to it.
+
+3. The compiler will know which definition to call based on the given parameters because it will have different function signatures. If there are two display function definition, one receives an int while the other receives an int *; When called in the main using display(a), the main would know to call the display function that receives a normal in.
+
+Quiz 2 Reflection
+
+1.       Dynamic memory allocation saves memory.
+
+2.       The address of the variables are passed.
+
+3.        
+
+Char * Name = nullptr;
+
+Name = new char[6];
+
+strcpy(name, “Storm”);
+
+delete[] name;
+
+Name = nullptr;
+

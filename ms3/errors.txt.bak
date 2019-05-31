@@ -1,0 +1,4 @@
+Product.cpp: In member function 'std::ostream& ama::Product::write(std::ostream&, int) const':
+Product.cpp:257:9: error: 'p_taxable' was not declared in this scope
+      << p_taxable << "," << p_available << "," << p_needed;
+         ^

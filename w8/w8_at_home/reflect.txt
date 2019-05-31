@@ -1,0 +1,4 @@
+1.      Abstract class does not have definitions to the functions, and they are virtual, and you cannot create objects with abstract classes. Concrete classes are classes that are created from an abstract class, a blueprint, and can create objects.
+2.      Because of polymorphism. Since polymorphism is in play, all the classes are connected through a hierarchy which is related with the parent-child relation(Inheritance).
+3.      So the client doesn't call the delete on a pointer to the abstract class. Usually when we work with abstract classes, pointers are involved and to ensure the destructor isn't called on it we declare it as a pure virtual destructor.
+4.      Overloading is when you change the function argument types. Overriding is when you rewrite a function in a derived class. Shadowing is when we want to access the original version of a function from the base class.

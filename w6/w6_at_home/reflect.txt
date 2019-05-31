@@ -1,0 +1,4 @@
+1. If we don’t check for self-assignment then we would have a memory leak when deallocating later.
+2. You need to set your pointer to a nullptr if you want to make a direct call.
+3. Because if we pass by value then it is basically invoking the copy constructor. If we try to pass by value, we will need to make a copy to make a copy.
+I learned about the Copy Constructor, assignment operator. I learned about making sure to check for self-assignment the hard way after the debugger lead me to where I was deallocating my phone. My classmates lead me to check my copy constructor.   

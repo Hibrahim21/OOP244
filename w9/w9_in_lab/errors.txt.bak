@@ -1,0 +1,18 @@
+In file included from Data.cpp:17:0:
+Data.h: In function 'T sict::readRow(std::istream&, const char*, T*, int)':
+Data.h:116:28: error: there are no arguments to 'strcmp' that depend on a template parameter, so a declaration of 'strcmp' must be available [-fpermissive]
+    if (strcmp(rowname, name) != 0) {
+                            ^
+Data.h:116:28: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+In file included from w9_lab_prof.cpp:12:0:
+Data.h: In function 'T sict::readRow(std::istream&, const char*, T*, int)':
+Data.h:116:28: error: there are no arguments to 'strcmp' that depend on a template parameter, so a declaration of 'strcmp' must be available [-fpermissive]
+    if (strcmp(rowname, name) != 0) {
+                            ^
+Data.h:116:28: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+Data.h: In instantiation of 'T sict::readRow(std::istream&, const char*, T*, int) [with T = int; std::istream = std::basic_istream<char>]':
+w9_lab_prof.cpp:72:57:   required from here
+Data.h:116:28: error: 'strcmp' was not declared in this scope
+Data.h: In instantiation of 'T sict::readRow(std::istream&, const char*, T*, int) [with T = double; std::istream = std::basic_istream<char>]':
+w9_lab_prof.cpp:75:69:   required from here
+Data.h:116:28: error: 'strcmp' was not declared in this scope

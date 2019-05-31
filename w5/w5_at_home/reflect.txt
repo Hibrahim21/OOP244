@@ -1,0 +1,4 @@
+1.	The operator += keeps the changes to the values while operator + changes the current fraction and returns a fraction object.
+2.	Some of the temporary objects include num, den, rnum, rden, a, b, c and d.
+3.	To minimize duplication, I used the reduce function in my 2-arg constructor so there will not be a need to call it later. I also used the isEmpty function multiple times instead of rewriting my code.
+In this lab I learned how to access the current object from a member function, to overload an operator and the life of an object.

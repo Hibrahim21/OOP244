@@ -1,0 +1,6 @@
+In this workshop, I learned a lot about formatting in C++, how to set a function parameter to  a default value and how to break down a number and do calculations. My greatest challenge was the Isbn validation. At first, I tried to change the Isbn long long into a string by using the string library, to_string. Since the return type was char, I had difficulties adding up the even and odd spaced values. 
+1)	At I have selected a long long as the type for ISBN because I needed to store 13 digits, int and long can’t store more than 2147483647.
+2)	I would create it into a good modular program. I would take the validation process into its own function, maybe an overloaded function, and return either true or false. If true I will set the data functions into what the user decides, if not I will set the data member to a safe empty state.
+Quiz 3 reflection
+2. Encapsulation is the process of combining member functions and data members into one single class.
+
